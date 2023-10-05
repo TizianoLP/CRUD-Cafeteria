@@ -79,7 +79,7 @@
     width:200px;
     align-self: center;
     order:1;
-    rotate:180deg
+    rotate:180deg;
 }
 .mpimage-left{
     height:200px;
@@ -140,7 +140,7 @@ nav li,a{
     cursor:pointer;
 }
 nav li a:hover{
-    color:white
+    color:white;
 }
 nav.socialmedia li{
     display:inline-block;
@@ -153,7 +153,7 @@ footer{
     text-align: center;
     font-weight: lighter;
     font-size: small;
-    padding:20px
+    padding:20px;
 }
 
 
@@ -174,7 +174,7 @@ footer{
     }
     img{
         height:4vw;
-        margin:3vw 0vw 
+        margin:3vw 0vw;
     }
     nav li,a{
         list-style:none;
@@ -196,7 +196,7 @@ footer{
         width:100px;
     }
     a{
-        order:-1
+        order:-1;
     }
     footer{
         width:100%;
@@ -207,6 +207,6 @@ footer{
         text-align: center;
         font-weight: lighter;
         font-size:medium;
-        padding:15px
+        padding:15px;
     }
 }
