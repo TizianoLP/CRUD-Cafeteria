@@ -11,9 +11,9 @@ let header=
     </a>
     <nav>
     <ul>
-        <li><a href="Menu.html">Menu</a></li>
-        <li><a href="Form.html">Iniciar Sesion</a></li>
         <li><a href="Bio.html">Quienes somos</a></li>
+        <li><a href="Menu.html">Menú</a></li>
+        <li><a href="Form.html">Contacto</a></li>
     </ul>
     </nav>
     `
@@ -21,6 +21,6 @@ document.getElementById("idheader").innerHTML=header
 
 let footer=
     `
-    © 2023 Cafeteria | Todos los derechos reservados | Terminos y Condiciones 
+    © 2023 Vedra Cafe | Todos los derechos reservados | Terminos y Condiciones 
     `
 document.getElementById("idfooter").innerHTML=footer

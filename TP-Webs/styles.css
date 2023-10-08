@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Libre+Baskerville&family=Oooh+Baby&display=swap');
+@font-face {
+    font-family: 'FreightText Pro ';
+    src: local('FreightText Pro  Light Regular'), local('FreightText-Pro--Light-Regular'),
+        url('FreightTextProLight-Regular.woff2') format('woff2'),
+        url('FreightTextProLight-Regular.woff') format('woff'),
+        url('FreightTextProLight-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
 /*Selector general*/
 *{
     margin:0;
@@ -14,7 +24,7 @@
 .mainpage{
     height:600px;
     width:100%;
-    animation: fondo 5s ease infinite;
+    animation: Fondo 5s ease infinite;
     background-size: 100% 100%;
     box-shadow: inset 0 0 0 1000px rgba(165,76,69,.4);
     display: flex;
@@ -24,14 +34,15 @@
 .welcometitle{
     align-self: center;
     text-align: center;
-    font-family:'Lucida Handwriting';
+    font-family: 'Oooh Baby';
+    font-size:80px;
 }
 .mpcontent{
     height:900px;
     width:100%;
     display: flex;
     flex-direction: column;
-    background-color: #f9e6b2;
+    background-color: #ffe0e0;
 }
 .mpdiv{
     width:100%;
@@ -45,7 +56,8 @@
     align-self: center;
     text-align: center;
     width:100px;
-    font-family: 'Lucida Handwriting';
+    font-family: 'Oooh Baby';
+    font-size:xx-large;
 }
 .right-arrow{
     height:100px;
@@ -60,11 +72,13 @@
     rotate:5deg;
     border-width: 2px;
     border-style:dashed;
+    transition: 0.1s;
 }
 .mpimage-right:hover{
     border-width:8px;
     border-style: dashed;
     border-color: #a95c56;
+    transition:0.1s;
 }
 .mptext-left{
     justify-self: right;
@@ -72,7 +86,8 @@
     text-align: center;
     order:2;
     width:180px;
-    font-family: 'Lucida Handwriting';
+    font-family: 'Oooh Baby';
+    font-size:xx-large;
 }
 .left-arrow{
     height:100px;
@@ -90,15 +105,49 @@
     rotate:-5deg;
     border-width: 2px;
     border-style:dashed;
+    transition:0.1s;
 }
 .mpimage-left:hover{
     border-width:8px;
     border-style: dashed;
     border-color: #a95c56;
+    transition: 0.1s;
+}
+.biopage{
+    height: 150vh;
+    background-color:#f59587;
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+.biocontent{
+    display:grid;
+    grid-template-rows: 20% 80%;
+    margin:10% 50px;
+}
+.biofoto{
+    margin: 10% 0px;
+    background-image: url(QS-Fondo.jpg);
+    background-size: 100% 100%;
+}
+.biotitle{
+    text-align: center;
+    color:white;
+    font-family: "FreightText Pro ", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 60px;
+}
+.biotext{
+    text-align: justify;
+    align-self: center;
+    color:white;
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 40px;
 }
 
 /* Animaciones */
-@keyframes fondo{
+@keyframes Fondo{
     0%,100%{
         background-image: url(Fondo1.png);
     }
@@ -208,5 +257,132 @@ footer{
         font-weight: lighter;
         font-size:medium;
         padding:15px;
+    }
+    /* Clases */
+    .mainlogo{
+        height:100px;
+        width:100px;
+    }
+    .mainpage{
+        height:600px;
+        width:100%;
+        animation: Fondo 5s ease infinite;
+        background-size: 100% 100%;
+        box-shadow: inset 0 0 0 1000px rgba(165,76,69,.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcometitle{
+        align-self: center;
+        text-align: center;
+        font-family: 'Oooh Baby';
+        font-size:80px;
+    }
+    .mpcontent{
+        height:900px;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffe0e0;
+    }
+    .mpdiv{
+        width:100%;
+        height:300px;
+        padding:20px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .mptext-right{
+        justify-self: left;
+        align-self: center;
+        text-align: center;
+        width:100px;
+        font-family: 'Oooh Baby';
+        font-size:xx-large;
+    }
+    .right-arrow{
+        height:100px;
+        width:200px;
+        align-self: center;
+    }
+    .mpimage-right{
+        height:200px;
+        width:200px;
+        z-index:0;
+        align-self: center;
+        rotate:5deg;
+        border-width: 2px;
+        border-style:dashed;
+        transition: 0.1s;
+    }
+    .mpimage-right:hover{
+        border-width:8px;
+        border-style: dashed;
+        border-color: #a95c56;
+        transition:0.1s;
+    }
+    .mptext-left{
+        justify-self: right;
+        align-self: center;
+        text-align: center;
+        order:2;
+        width:180px;
+        font-family: 'Oooh Baby';
+        font-size:xx-large;
+    }
+    .left-arrow{
+        height:100px;
+        width:200px;
+        align-self: center;
+        order:1;
+        rotate:180deg;
+    }
+    .mpimage-left{
+        height:200px;
+        width:200px;
+        z-index:0;
+        order:-1;
+        align-self: center;
+        rotate:-5deg;
+        border-width: 2px;
+        border-style:dashed;
+        transition:0.1s;
+    }
+    .mpimage-left:hover{
+        border-width:8px;
+        border-style: dashed;
+        border-color: #a95c56;
+        transition: 0.1s;
+    }
+    .biopage{
+        height: 150vh;
+        background-color:#f59587;
+        display:grid;
+        grid-template-columns: 50% 50%;
+    }
+    .biocontent{
+        display:grid;
+        grid-template-rows: 20% 80%;
+        margin:10% 50px;
+    }
+    .biofoto{
+        margin: 10% 0px;
+        background-image: url(QS-Fondo.jpg);
+        background-size: 100% 100%;
+    }
+    .biotitle{
+        text-align: center;
+        color:white;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 60px;
+    }
+    .biotext{
+        text-align: justify;
+        align-self: center;
+        color:white;
+        font-weight: lighter;
+        font-size: 20px;
+        line-height: 40px;
     }
 }
