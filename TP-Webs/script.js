@@ -7,7 +7,7 @@ let header=
     </ul>
     </nav>
     <a href="index.html">
-    <img src="mainlogo.jpg" class="mainlogo">
+    <img src="mainlogo.jpg" class="mainlogo" alt="Logo">
     </a>
     <nav>
     <ul>
@@ -21,6 +21,6 @@ document.getElementById("idheader").innerHTML=header
 
 let footer=
     `
-    © 2023 Vedra Cafe | Todos los derechos reservados | Terminos y Condiciones 
+    © 2023 Vedra Cafe | Todos los derechos reservados | Terminos y Condiciones
     `
 document.getElementById("idfooter").innerHTML=footer
