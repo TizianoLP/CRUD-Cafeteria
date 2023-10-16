@@ -7,78 +7,110 @@
     <title>Cafetería | Menú</title>
     <link rel="icon" href="mainlogo.jpg">
 </head>
-<body>
+<body id="bodyMenu">
     <header id="idheader"></header>
-    <footer id="idfooter"></footer>
-    <script src="script.js"></script>
-    <ul>Café
-        <li>Espresso simple / doble</li>
-        <li>Americano</li>
-        <li>Cortado</li>
-        <li>Cappuccino</li>
-        <li>Flat white</li>
-        <li>Latte</li>
-        <li>Filtrado</li>
-        <li>Chimi - El barista elige</li>
-    </ul>
-    <ul>Sin café
-        <li>Matcha latte frío - con leche de frutilla o almíbar herbal</li>
-        <li>Té frío - con almíbar cítrico</li>
-        <li>Limonada - fruta de estación</li>
-        <li>Agua o agua con gas</li>
-        <li>Té calentito (Tealosophy)</li>
-        <li>Chai latte</li>
-    </ul>
-    <ul>Especiales fríos
-        <li>Como un flan - Iced latte con naranja y caramelo</li>
-        <li>Speedy Gonzales - Americano frío con reducción de mandarina y ajíes</li>
-        <li>Espresso tonic - con reducción de maracuyá</li>
-        <li>Affogato hecho en casa - Helado casero de vainilla, espresso simple y biscotti de almendras para más placer</li>
-        <li>Colbrucito - Americano mediano con reducción de mandarinas y ajíes</li>
-    </ul>
-    <ul>Otras bebidas
-        <li>Mocca buba - Cappuccino doble con chocolate y cabutia</li>
-        <li>Gin tonic - Macerado con café y almíbar cítrico</li>
-        <li>Vermut casero - Con soda o tónica</li>
-        <li>Ice flat white</li>
-    </ul>
-    <p>Adicional leche de almendras</p>
-    <ul>Salados
-        <li>Tostón palta - Pan de masa madre, queso crema, palta, alioli y huevo pasado por agua</li>
-        <li>Tostón palta vegano - Pan de masa madre, hummus de arvejas, palta, limón y eneldo</li>
-        <li>Tostón ricota - Pan de masa madre, ricota casera, pesto y tomates confitados</li>
-    </ul>
-    <ul>Sanguchitos
-        <li>Sanguchito veggie - Pan brioche, pesto, tomates confitados, berenjenas al escabeche y queso</li>
-        <li>Sanguchito pastrón - Pan brioche, pastrón casero, queso, pepinos en pickle y mostaza de dijon
-        </li>
-        <li>Tostado de jamón y queso - Pan brioche, mostaza de dijon, bechamel, jamón y queso. Opción capresse</li>
-        <li>Tuna bagel - Bagel casero relleno de atún, queso crema, huevo, palta, aceitunas y eneldo</li>
-    </ul>
-    <ul>Platos
-        <li>Plato brunch - Panceta crocante, huevos revueltos, palta, tomate fresco y pan tostado</li>
-        <li>Plato Ibérico - Jamón crudo, queso parmesano, tomate rallado y panes tostados con ajo</li>
-        <li>Mbejú - Tortilla de chipa, palta, alioli, cebollas en pickle y huevo pasado por agua</li>
-    </ul>
-    <ul>Otros
-        <li>Yogurt con granola - Yogurt natural con granola casera, miel y fruta de estación</li>
-        <li>Tostadas con queso y dulce - Tostadas de pan de masa madre, mermelada de moras y queso crema. Opción vegana con mantequilla de maní</li>
-        <li>Medialuna grillada con jamón y queso</li>
-    </ul>
-    <p>Combos</p>
-        <ul>Brunch para uno
-            <li>1 tostón a elección</li>
-            <li>1 café (Latte o cappuccino)</li>
-            <li>1 limonada chica a elección</li>
-            <li>1 cookie o porción de budín</li>
+<main>
+    <div id="calientes">
+        <ul class="subMenu">Calientes
+            <li>Espresso simple / doble</li>
+            <li>Americano</li>
+            <li>Cortado</li>
+            <li>Cappuccino</li>
+            <li>Flat white</li>
+            <li>Latte</li>
+            <li>Filtrado</li>
+            <li>Chimi - El barista elige</li>
         </ul>
-        <ul>Brunch para dos
-            <li>1 plato o sandwich a elección</li>
-            <li>1 tostón</li>
-            <li>2 vasos chicos de limonada</li>
-            <li>2 cafés (Latte o cappuccino)</li>
-            <li>1 porción de torta o 2 cookies</li>
+    </div>
+    <div id="imgCafe1"><img id="fotoCafe" src="tazaCafe.jpg" alt="Café"></div>
+    <div id="sinCafe">
+        <ul class="subMenu">Sin café
+            <li>Matcha latte frío - con leche de frutilla o almíbar herbal</li>
+            <li>Té frío - con almíbar cítrico</li>
+            <li>Limonada - fruta de estación</li>
+            <li>Agua o agua con gas</li>
+            <li>Té calentito (Tealosophy)</li>
+            <li>Chai latte</li>
         </ul>
-    <p>Para pastelería, pasa a elegir por nuestro mostrador!</p>
-    </body>
+    </div>
+    <div id="espFrios">
+        <ul class="subMenu">Especiales fríos
+            <li>Como un flan - Iced latte con naranja y caramelo</li>
+            <li>Speedy Gonzales - Americano frío con reducción de mandarina y ajíes</li>
+            <li>Espresso tonic - con reducción de maracuyá</li>
+            <li>Affogato hecho en casa - Helado casero de vainilla, espresso simple y biscotti de almendras para más placer</li>
+            <li>Colbrucito - Americano mediano con reducción de mandarinas y ajíes</li>
+        </ul>
+    </div>
+    <div id="otBebidas">
+        <ul class="subMenu">Otras bebidas
+            <li>Mocca buba - Cappuccino doble con chocolate y cabutia</li>
+            <li>Gin tonic - Macerado con café y almíbar cítrico</li>
+            <li>Vermut casero - Con soda o tónica</li>
+            <li>Ice flat white</li>
+        </ul>
+        <p id="lecheAlmendras"><b>*Adicional leche de almendras*</b></p>
+    </div>
+    <div id="imgCafe2"><img id="fotoBebidas" src="frios.JPG" alt="Bebidas"></div>
+    <div id="brunch">
+        <p id="subBrunch">Combos</p>
+        <div id="paraUno">
+            <div id="brunchUno">
+                <ul class="subMenu">Brunch para uno
+                    <li class="itemBrunch">1 tostón a elección</li>
+                    <li class="itemBrunch">1 café (Latte o cappuccino)</li>
+                    <li class="itemBrunch">1 limonada chica a elección</li>
+                    <li class="itemBrunch">1 cookie o porción de budín</li>
+                </ul>
+            </div>
+        </div>
+        <div id="paraDos">
+            <div id="brunchDos">
+                <ul class="subMenu">Brunch para dos
+                    <li class="itemBrunch">1 plato o sandwich a elección</li>
+                    <li class="itemBrunch">1 tostón</li>
+                    <li class="itemBrunch">2 vasos chicos de limonada</li>
+                    <li class="itemBrunch">2 cafés (Latte o cappuccino)</li>
+                    <li class="itemBrunch">1 porción de torta o 2 cookies</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="salados">
+        <ul class="subMenu">Salados
+            <li>Tostón palta - Pan de masa madre, queso crema, palta, alioli y huevo pasado por agua</li>
+            <li>Tostón palta vegano - Pan de masa madre, hummus de arvejas, palta, limón y eneldo</li>
+            <li>Tostón ricota - Pan de masa madre, ricota casera, pesto y tomates confitados</li>
+        </ul>
+    </div>
+    <div id="imgCafe3"><img id="fotoSalado" src="salado.jpg" alt="Tostón de palta"></div>
+    <div id="sandwiches">
+        <ul class="subMenu">Sanguchitos
+            <li>Sanguchito veggie - Pan brioche, pesto, tomates confitados, berenjenas al escabeche y queso</li>
+            <li>Sanguchito pastrón - Pan brioche, pastrón casero, queso, pepinos en pickle y mostaza de dijon
+            </li>
+            <li>Tostado de jamón y queso - Pan brioche, mostaza de dijon, bechamel, jamón y queso. Opción capresse</li>
+            <li>Tuna bagel - Bagel casero relleno de atún, queso crema, huevo, palta, aceitunas y eneldo</li>
+        </ul>
+    </div>
+    <div id="imgCafe4"><img id="fotoDulce" src="alfajor.jpg" alt="Alfajores"></div>
+    <div id="platos">
+        <ul class="subMenu">Platos
+            <li>Plato brunch - Panceta crocante, huevos revueltos, palta, tomate fresco y pan tostado</li>
+            <li>Plato Ibérico - Jamón crudo, queso parmesano, tomate rallado y panes tostados con ajo</li>
+            <li>Mbejú - Tortilla de chipa, palta, alioli, cebollas en pickle y huevo pasado por agua</li>
+        </ul>
+    </div>
+    <div id="otPlatos">
+        <ul class="subMenu">Otros
+            <li>Yogurt con granola - Yogurt natural con granola casera, miel y fruta de estación</li>
+            <li>Tostadas con queso y dulce - Tostadas de pan de masa madre, mermelada de moras y queso crema. Opción vegana con mantequilla de maní</li>
+            <li>Medialuna grillada con jamón y queso</li>
+        </ul>
+    </div>
+    <p id="mostrador">Para pastelería, pasa a elegir por nuestro mostrador!</p>
+</main>
+<footer id="idfooter"></footer>
+<script src="script.js"></script>
+</body>
 </html>
