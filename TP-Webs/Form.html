@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contactanos</title>
+    <link rel="icon" href="logoFavicon.jpeg">
+</head>
+<body class="bodyForm">
+    <header id="idheader"></header>
+    <div class="formheader">
+        <h1 class="formtitle">CONTACTO</h1>
+        <h1>Ponte en contacto con nosotros si tienes dudas o sugerencias</h1>
+        <h1>Completa el formulario con tus datos</h1>
+    </div>
+    <form id="formularioContacto">
+        <div>
+            <div class="caja" id="name">Nombre/s*</div>
+            <input type="text" id="nombre" class="mainbox">
+            <div class="caja" id="ape">Apellido/s*</div>
+            <input type="text" id="apellido" class="mainbox">
+            <div class="caja" id="Teléfono">Teléfono</div>
+            <input type="number" name="Teléfono" id="telefono" class="subbox">
+            <div class="caja" id="city">Ciudad</div>
+            <input type="text" name="city" id="ciudad" class="subbox">
+            <div class="caja" style="overflow: hidden" id="Asunto">Asunto <br>
+                <select name="Asunto*" id="asunto" size="0">
+                    <option value="1"></option>
+                    <option value="2">Sugerencia</option>
+                    <option value="3">Consulta</option>
+                    <option value="4">Reclamo</option>
+                    <option value="5">Otros</option>
+                </select>
+            </div>
+            <div class="caja" id="Mensaje">Mensaje*</div>
+            <textarea id="mensaje" class="textbox"></textarea>
+            <br>
+            <div class="checksbox">
+            <input type="checkbox" id="novedades"> Acepto recibir novedades y promociones <br>
+            <input type="checkbox" id="privacidad"> Acepto la política de privacidad <br> <br>
+            </div>
+            <input type="submit" id="enviarBtn" value="Enviar">
+        </div>
+    </form>
+    <footer id="idfooter"></footer>
+    <script src="script.js"></script>
+</body>
+</html>
