@@ -2,7 +2,7 @@ let header=
     `
     <nav class="socialmedia">
     <ul>
-        <li><a><img src="Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.instagram.com/vedra.cafe/?igshid=MzRlODBiNWFlZA%3D%3D"><img src="Instagram.png" alt="Instagram"></a></li>
         <li><a><img src="X.png" alt="Twitter"></a></li>
     </ul>
     </nav>
