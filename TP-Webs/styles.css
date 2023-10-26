@@ -229,7 +229,6 @@
  width:200px; 
  height:150px; 
 }
-
 .horarios p {
     font-family: 'Times New Roman', Times, serif;  
     font-style: italic;
@@ -424,6 +423,17 @@ aside{
     grid-template-columns: 50% 50%;
     width:100%;
     background-color: #f59587;
+}
+
+/*API*/
+#respuestaAPI {
+    text-align: center; /* Centra el contenido de respuestaAPI */
+    margin: 0 auto; /* Centra la caja de respuestaAPI en el centro de la pantalla */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%; /* Limita el ancho máximo de la caja de respuesta */
+    margin-top: 20px; /* Añade espacio en la parte superior de la caja de respuesta */
 }
 
 

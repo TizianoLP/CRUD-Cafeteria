@@ -27,40 +27,57 @@ document.getElementById("idfooter").innerHTML=footer
 
 document.getElementById("formularioContacto").addEventListener("submit", function(event) {
     event.preventDefault(); // Evitar que el formulario se envíe automáticamente
-
+    
+    // Obtener los valores de los campos del formulario
     var nombre = document.getElementById("nombre").value;
     var apellido = document.getElementById("apellido").value;
     var mensaje = document.getElementById("mensaje").value;
     var aceptarNovedades = document.getElementById("novedades").checked;
     var aceptarPoliticaPrivacidad = document.getElementById("privacidad").checked;
 
-    if (nombre.trim() === "" || apellido.trim() === "" || mensaje.trim() === "") {
-        alert("Por favor, complete los campos obligatorios.");
+    if (nombre.trim() === "" || apellido.trim() === "" || mensaje.trim() === "" || (!aceptarNovedades || !aceptarPoliticaPrivacidad)) {
+        // Mostrar un mensaje indicando qué campo falta completar
+        var mensajeError = "Por favor, complete los siguientes campos: ";
+        if (nombre.trim() === "") mensajeError += "Nombre, ";
+        if (apellido.trim() === "") mensajeError += "Apellido, ";
+        if (mensaje.trim() === "") mensajeError += "Mensaje, ";
+        if (!aceptarNovedades || !aceptarPoliticaPrivacidad) mensajeError += "Acepte los términos, ";
+        alert(mensajeError.slice(0, -2));
         return;
     }
 
-    if (!aceptarNovedades && !aceptarPoliticaPrivacidad) {
-        alert("Por favor, acepta recibir novedades y la política de privacidad para enviar el formulario.");
-        return;
-    } else if (!aceptarNovedades) {
-        alert("Por favor, acepta recibir novedades para enviar el formulario.");
-        return;
-    } else if (!aceptarPoliticaPrivacidad) {
-        alert("Por favor, acepta la política de privacidad para enviar el formulario.");
-        return;
-    }
+    // Resto del código para enviar el formulario a la API y mostrar la respuesta
+    fetch('https://jsonplaceholder.typicode.com/comments', {
+        method: 'POST',
+        body: JSON.stringify({
+            nombre: nombre,
+            apellido: apellido,
+            mensaje: mensaje,
+            novedades: aceptarNovedades,
+            politicaPrivacidad: aceptarPoliticaPrivacidad
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+    .then(response => response.json())
+    .then(json => {
+        // Agregar la respuesta de la API al div de respuestaAPI
+        var respuestaDiv = document.getElementById("respuestaAPI");
+        respuestaDiv.innerHTML = `<strong>${nombre} ${apellido}</strong>, ${mensaje}`;
 
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-        .then(response => response.json())
-        .then(json => {
-            console.log(json);
-            alert("Formulario enviado correctamente. Respuesta de la API: " + JSON.stringify(json));
-            // Deshabilitar el botón de enviar después de enviar el formulario
-            document.getElementById("enviarBtn").disabled = true;
-        })
-        .catch(error => {
-            console.error("Error al hacer la solicitud a la API:", error);
-            alert("Ocurrió un error al enviar el formulario. Por favor, inténtelo nuevamente.");
-        });
+        // Establecer un ancho máximo para el contenido de respuestaAPI
+        respuestaDiv.style.maxWidth = "80%";
+
+        // Deshabilitar el botón de enviar después de enviar el formulario
+        document.getElementById("enviarBtn").disabled = true;
+
+        // Mostrar la respuesta de la API en la consola
+        console.log(json);
+    })
+    .catch(error => {
+        console.error("Error al hacer la solicitud a la API:", error);
+        alert("Ocurrió un error al enviar el formulario. Por favor, inténtelo nuevamente.");
+    });
 });
 
