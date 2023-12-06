@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar empleado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="agregarBody">
+    <header id="idheader"></header>
+    <h1>Agregar nuevo empleado</h1>
+    <h3>Vedra Café</h3>
+    <div class="agregarForm">
+    <form id="formulario" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+
+        <label for="dni">DNI:</label>
+        <input type="number" id="dni" name="dni" required><br>
+
+        <label for="puesto">Puesto:</label>
+        <input type="text" id="puesto" name="puesto" required><br>
+
+        <label for="salario">Salario:</label>
+        <input type="number" id="salario" name="salario">
+
+        <label for="turno">Turno de trabajo:</label>
+        <input type="text" id="turno" name="turno">
+
+        <button type="submit">AGREGAR</button>
+        <a href="index.html">Menú principal</a>
+    </form>
+    </div>
+    <footer id="idfooter"></footer>
+    <script src="agregar.js"></script>
+</body>
+
+</html>

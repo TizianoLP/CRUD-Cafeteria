@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar empleado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="eliminarBody">
+    <header id="idheader"></header>
+    <h1>Eliminar empleados</h1>
+    <h3>Vedra Café</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Puesto</th>
+                <th>Salario</th>
+                <th>Turno</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="empleado in empleados">
+                <td>{{ empleado.dni }}</td>
+                <td>{{ empleado.nombre }}</td>
+                <td>{{ empleado.apellido}}</td>
+                <td>{{ empleado.puesto }}</td>
+                <td>{{ empleado.salario }}</td>
+                <td>{{ empleado.turno }}</td>
+                <td><button @click="eliminarEmpleado(empleado.dni)">ELIMINAR</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="contenedor-centrado">
+        <a href="index.html">Menú principal</a>
+    </div>
+    <footer id="idfooter" style="bottom:0;position:static;"></footer>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="eliminar.js"></script>
+</body>
+
+</html>
